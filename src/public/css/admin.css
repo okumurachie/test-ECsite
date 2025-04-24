@@ -1,0 +1,97 @@
+.admin-header {
+    background-color:  rgb(81, 198, 198);
+    padding: 1rem 0;
+}
+
+.admin-header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-header__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.admin-nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav__item {
+    margin-left: 1.5rem;
+}
+
+.admin-nav__link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.admin-nav__link:hover {
+    text-decoration: underline;
+}
+
+.admin-nav__link__button{
+    background: rgb(81, 198, 198);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    font-size: inherit;
+}
+.admin-nav__link__button:hover{
+    text-decoration: underline;
+}
+.admin_register__alert--success {
+    padding: 10px 30px;
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+.admin_register__alert--danger {
+    padding: 10px 0;
+    background-color: #f8d7da;
+    color: #842029;
+    border-color: #f5c2c7;
+}
+.admin_register__alert--danger ul {
+    margin: 0;
+}
+.admin-footer {
+    background-color:  rgb(81, 198, 198);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.admin-footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.small{
+    color: #fff;
+}
+.footer-nav__link {
+    color: #fff;
+    text-decoration: none; /* リンクの下線を消す */
+}
+.footer-nav__item{
+    list-style: none;
+}
+.footer-nav__link:hover {
+    text-decoration: underline;
+}

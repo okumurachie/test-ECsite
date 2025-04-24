@@ -1,0 +1,97 @@
+.header {
+    background: rgb(81, 198, 198);
+}
+.user_name {
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 90%;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header-utilities nav {
+    width: 18%;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav__link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-nav__button {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.register__alert--success {
+    padding: 10px 30px;
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+.register__alert--danger {
+    padding: 10px 0;
+    background-color: #f8d7da;
+    color: #842029;
+    border-color: #f5c2c7;
+}
+.register__alert--danger ul {
+    margin: 0;
+}
+.footer {
+    background:  rgb(81, 198, 198);
+    margin-top: 100px;
+}
+
+.footer__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.small {
+    color: #fff;
+}
+.footer-nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-nav__item {
+    list-style: none;
+}
+.footer-nav__link {
+    color: #fff;
+    text-decoration: none; /* リンクの下線を消す */
+}
+.footer-nav__link:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
