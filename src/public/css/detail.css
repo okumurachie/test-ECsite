@@ -57,15 +57,6 @@
 .item_comment p{
     margin: 40px 0;
 }
-a{
-    text-decoration: none;
-}
-.item_sold{
-    background-color: red;
-    color:#ffffff;
-    font-size: 60px;
-    text-align: center;
-}
 .form_button {
     margin-top: 120px;
     display: flex;

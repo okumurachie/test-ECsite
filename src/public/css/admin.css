@@ -2,7 +2,14 @@
     background-color:  rgb(81, 198, 198);
     padding: 1rem 0;
 }
-
+.user_name {
+    color: #fff;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    font-weight: bold;
+}
 .admin-header__inner {
     max-width: 1200px;
     margin: 0 auto;

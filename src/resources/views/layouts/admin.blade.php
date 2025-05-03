@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
     @yield('css')
 </head>
 
 <body>
     <header class="admin-header">
+        @if (Auth::check())
+        <p class="user_name">{{ Auth::user()->name}}様</p>
+        @endif
         <div class="admin-header__inner">
             <h1 class="admin-header__title">管理者画面</h1>
             @auth
@@ -20,10 +24,10 @@
                         <a href="{{ route('admin.dashboard') }}" class="admin-nav__link">ダッシュボード</a>
                     </li>
                     <li class="admin-nav__item">
-                        <a href="{{ route('admin.item.add') }}" class="admin-nav__link">商品追加</a>
+                        <a href="{{ route('admin.item.add') }}" class="admin-nav__link">商品登録</a>
                     </li>
                     <li class="admin-nav__item">
-                        <a href="{{ route('admin.item.edit') }}" class="admin-nav__link">商品編集</a>
+                        <a href="{{ route('admin.item.list') }}" class="admin-nav__link">商品編集</a>
                     </li>
                     <li class="admin-nav__item">
                         <form action="{{ route('admin.logout') }}" method="POST">
@@ -60,9 +64,10 @@
     <footer class="admin-footer">
         <div class="admin-footer__inner">
             <small class="small">&copy; 2026, inc.</small>
-            <li class="footer-nav__item">
-                <a href="/" class="footer-nav__link">ホームに戻る</a>
-            </li>
+            <ul class="footer-nav__link">
+                <li class="footer-nav__item">
+                    <a href="/" class="footer-nav__link">ホームに戻る</a>
+                </li>
             </ul>
         </div>
     </footer>

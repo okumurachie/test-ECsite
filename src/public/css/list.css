@@ -1,0 +1,43 @@
+.item-list__content{
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+h2{
+    text-align: center;
+}
+.item-table__inner{
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.item-table__inner th, .item-table__inner td{
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 18px;
+}
+.item-table__inner th{
+    background-color: #f2f2f2;
+    font-size: 20px;
+}
+.item-table__action {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.form_button-edit button, .form_button-delete button{
+    font-size: 25px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: auto;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.form_button-edit button{
+    background-color:  #4CAF50;
+}
+.form_button-delete button{
+    background-color: #f44336;
+}

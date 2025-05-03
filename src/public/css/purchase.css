@@ -1,0 +1,108 @@
+.purchase__content{
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+.purchase_item{
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.purchase_item th, .purchase_item td{
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 18px;
+}
+.purchase_item th{
+    background-color: #f2f2f2;
+    font-size: 20px;
+}
+.total_price{
+    margin: 30px auto 0 auto;
+    width: 90%;
+    display: block;
+    padding: 0px 15px;
+    text-align: right;
+    font-size: 30px;
+}
+.payment_method{
+    margin: 0 auto;
+    text-align: left; /* ← form内は左揃え */
+    width: 70%;     /* ← 好きな幅を設定（例 500px） */
+}
+.recipient {
+    margin: 0 auto;
+    text-align: left; /* ← form内は左揃え */
+    width: 70%;     /* ← 好きな幅を設定（例 500px） */
+}
+h2{
+    font-size: 30px;
+}
+.select-payment_method select {
+    width: 300px;
+    height: 3em;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 120px;
+}
+.post_code, .recipient > div {
+    width: 100%;
+    display: flex;         /* ← ラベルとインプットを横並び */
+    align-items: center;   /* ← 縦方向も中央揃え */
+    margin-bottom: 20px;
+}
+.post_code_label, .recipient_label {
+    width: 120px;         /* ← ラベルを固定幅にする */
+    font-size: 20px;
+}
+
+.post_code_input{
+    height: 3em;
+    width: 25%;
+}
+.recipient_input {
+    height: 3em;
+    margin-left: 18px;
+    width: 100%;          /* ← インプットは残り全部使う */
+}
+.form-button{
+    text-align: center;
+    margin-top: 50px;
+}
+.form-button button{
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: auto;
+    font-size: 25px;
+    background-color: #f37b9b;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+.for-cart{
+    text-align: right;
+    margin-top: 50px;
+}
+.for-cart button{
+    cursor: pointer;
+    font-size: 18px;
+    width: auto;
+}
+.continue-shopping{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.back-to-index button, .shopping_complete button{
+    font-size: 25px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: auto;
+    background-color: #f37b9b;
+    margin-top: 30px;
+    cursor: pointer;
+}

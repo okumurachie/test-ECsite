@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/item/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
     Route::post('/item/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
     Route::post('/item/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+    Route::get('/purchase', [ItemController::class, 'showPurchaseForm'])->name('purchase.form');
+    Route::post('/purchase', [ItemController::class, 'processPurchase'])->name('purchase.process');
 });
 
 
@@ -54,6 +56,13 @@ Route::prefix('admin')->group(function () {
         // 商品関連のルート
         Route::get('item/add', [AdminController::class, 'add'])->name('admin.item.add');
         Route::post('item/add', [AdminController::class, 'store']);
-        Route::get('item/edit', [AdminController::class, 'edit'])->name('admin.item.edit');
+        Route::get('item/list', [AdminController::class, 'showEditList'])->name('admin.item.list');
+        Route::get('item/edit/{id}', [AdminController::class, 'edit'])->name('admin.item.edit');
+        Route::patch('/items/update/{id}', [AdminController::class, 'update'])->name('items.update');
+        Route::patch('/items/imageUpdate/{id}', [AdminController::class, 'imageUpdate'])->name('items.imageUpdate');
+        Route::get('/item/delete/{id}', [AdminController::class, 'delete']);
+        Route::post('/items/delete/{id}', [AdminController::class, 'softDelete'])->name('items.softDelete');
+        Route::get('item/shipping_list', [AdminController::class, 'showShippingList'])->name('admin.item.shipping_list');
+        Route::post('/purchase/{id}/ship', [AdminController::class, 'ship'])->name('purchase.ship');
     });
 });

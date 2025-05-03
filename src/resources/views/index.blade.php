@@ -14,7 +14,7 @@
             <h3>商品一覧</h3>
         </div>
         <div class="content__box">
-            <!-- @foreach($items as $item) -->
+            @foreach($items as $item)
             <a href="/details/{{$item['id']}}" class="content__id">
                 <div class="content__box-item">
                     <div class="content__inner">
@@ -32,16 +32,17 @@
                             </div>
                             <div class="content__detail-2">
                                 <p>{{$item['description']}}</p>
+                                <p class="stock">残り{{$item['stock']}}点</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-            <!-- @endforeach -->
+            @endforeach
         </div>
     </div>
 </div>
 <div class="pagination">
-    {{$items->links()}}
+    {{$items->links('vendor.pagination.default')}}
 </div>
 @endsection

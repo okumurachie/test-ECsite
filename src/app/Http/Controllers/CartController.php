@@ -13,7 +13,7 @@ class CartController extends Controller
         $quantity = (int)$request->input('quantity', 1);
 
         // 現在のカートをセッションから取得（なければ空配列）
-        $cart = session()->get('cart', []);
+        $cart = $request->session()->get('cart', []);
 
         if (isset($cart[$id])) {
             // 既にあるなら数量を加算
@@ -23,12 +23,12 @@ class CartController extends Controller
             $cart[$id] = [
                 'name' => $item->name,
                 'price' => $item->price,
-                'image' => $item->image ?? '',
                 'quantity' => $quantity,
+                // 'image' => $item->image ?? '',
             ];
         }
 
-        session()->put('cart', $cart);
+        $request->session()->put('cart', $cart); //カートの中身（$cart配列）をセッションに保存する
 
         return redirect('/item/cart')->with('message', 'カートに追加しました！');
     }
